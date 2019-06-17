@@ -846,11 +846,7 @@ layer {
   bottom: "conv5_1_D"
   top: "pool4_D"
   bottom: "pool4_mask"
-  upsample_param {
-    scale: 2
-    upsample_w: 60
-    upsample_h: 45
-  }
+ 
 }
 layer {
   bottom: "pool4_D"
@@ -1002,9 +998,7 @@ layer {
   bottom: "conv4_1_D"
   top: "pool3_D"
   bottom: "pool3_mask"
-  upsample_param {
-    scale: 2
-  }
+ 
 }
 layer {
   bottom: "pool3_D"
@@ -1156,9 +1150,7 @@ layer {
   bottom: "conv3_1_D"
   top: "pool2_D"
   bottom: "pool2_mask"
-  upsample_param {
-    scale: 2
-  }
+
 }
 layer {
   bottom: "pool2_D"
@@ -1262,9 +1254,6 @@ layer {
   bottom: "conv2_1_D"
   top: "pool1_D"
   bottom: "pool1_mask"
-  upsample_param {
-    scale: 2
-  }
 }
 layer {
   bottom: "pool1_D"

@@ -694,11 +694,6 @@ layer {
   bottom: "pool5"
   top: "pool5_D"
   bottom: "pool5_mask"
-  upsample_param {
-    scale: 2
-    upsample_w: 30
-    upsample_h: 23
-  }
 }
 layer {
   bottom: "pool5_D"

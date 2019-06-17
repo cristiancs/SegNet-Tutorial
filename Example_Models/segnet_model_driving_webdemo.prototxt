@@ -44,7 +44,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv1_1"
@@ -92,7 +102,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv1_2"
@@ -152,7 +172,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv2_1"
@@ -200,7 +230,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv2_2"
@@ -260,7 +300,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv3_1"
@@ -308,7 +358,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv3_2"
@@ -356,7 +416,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv3_3"
@@ -416,7 +486,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv4_1"
@@ -464,7 +544,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv4_2"
@@ -512,7 +602,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv4_3"
@@ -572,7 +672,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv5_1"
@@ -620,7 +730,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv5_2"
@@ -668,7 +788,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv5_3"
@@ -694,6 +824,11 @@ layer {
   bottom: "pool5"
   top: "pool5_D"
   bottom: "pool5_mask"
+  upsample_param {
+    scale: 2
+    upsample_w: 30
+    upsample_h: 23
+  }
 }
 layer {
   bottom: "pool5_D"
@@ -735,7 +870,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv5_3_D"
@@ -784,7 +929,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv5_2_D"
@@ -832,7 +987,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv5_1_D"
@@ -846,7 +1011,11 @@ layer {
   bottom: "conv5_1_D"
   top: "pool4_D"
   bottom: "pool4_mask"
- 
+  upsample_param {
+    scale: 2
+    upsample_w: 60
+    upsample_h: 45
+  }
 }
 layer {
   bottom: "pool4_D"
@@ -888,7 +1057,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv4_3_D"
@@ -936,7 +1115,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv4_2_D"
@@ -984,7 +1173,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv4_1_D"
@@ -998,7 +1197,9 @@ layer {
   bottom: "conv4_1_D"
   top: "pool3_D"
   bottom: "pool3_mask"
- 
+  upsample_param {
+    scale: 2
+  }
 }
 layer {
   bottom: "pool3_D"
@@ -1040,7 +1241,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv3_3_D"
@@ -1088,7 +1299,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv3_2_D"
@@ -1136,7 +1357,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv3_1_D"
@@ -1150,7 +1381,9 @@ layer {
   bottom: "conv3_1_D"
   top: "pool2_D"
   bottom: "pool2_mask"
-
+  upsample_param {
+    scale: 2
+  }
 }
 layer {
   bottom: "pool2_D"
@@ -1192,7 +1425,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv2_2_D"
@@ -1240,7 +1483,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv2_1_D"
@@ -1254,6 +1507,9 @@ layer {
   bottom: "conv2_1_D"
   top: "pool1_D"
   bottom: "pool1_mask"
+  upsample_param {
+    scale: 2
+  }
 }
 layer {
   bottom: "pool1_D"
@@ -1295,7 +1551,17 @@ layer {
     lr_mult: 1
     decay_mult: 0
   }
-  
+  bn_param {
+	bn_mode: INFERENCE
+	scale_filler {
+	  type: "constant"
+	  value: 1
+	}
+	shift_filler {
+	  type: "constant"
+	  value: 0
+	}
+ }
 }
 layer {
   bottom: "conv1_2_D"
